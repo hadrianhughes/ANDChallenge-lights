@@ -18,4 +18,4 @@ initialise =
 
 
 main :: IO ()
-main = (putStrLn . show) =<< initialise
+main = (putStrLn . show . sort) =<< initialise
