@@ -1,5 +1,10 @@
 module Types where
 
-data ParseError = ParseError String
+import Control.Exception
 
-data Interval = Interval Integer Integer deriving (Show)
+
+data ParseError = ParseError String deriving (Show)
+
+instance Exception ParseError
+
+data Interval = Interval Integer Integer deriving (Show, Ord, Eq)
