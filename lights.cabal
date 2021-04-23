@@ -26,6 +26,8 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Types
+      InputOutput
   other-modules:
       Paths_lights
   hs-source-dirs:
@@ -33,6 +35,7 @@ library
   build-depends:
       base >=4.7 && <5
     , directory
+    , regex-compat
   default-language: Haskell2010
 
 executable lights-exe
