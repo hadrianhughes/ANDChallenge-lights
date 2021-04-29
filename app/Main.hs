@@ -5,6 +5,7 @@ import Data.List
 
 import InputOutput
 import Types
+import Lib
 
 
 initialise :: IO [Interval]
@@ -18,4 +19,4 @@ initialise =
 
 
 main :: IO ()
-main = (putStrLn . show . sort) =<< initialise
+main = (putStrLn . show) <$> collapseIntervals =<< initialise
