@@ -26,3 +26,7 @@ intervalsOverlap (Interval aStart aEnd) (Interval bStart bEnd) = contained || at
   where
     contained = (aStart > bStart && aEnd < bEnd) || (bStart > aStart && bEnd < aEnd)
     atEnds    = (aStart < bStart && aEnd > bStart) || (bStart < aStart && bEnd > aStart)
+
+
+sumIntervals :: [Interval] -> Integer
+sumIntervals = foldr (\(Interval a b) s -> s + (b - a)) 0

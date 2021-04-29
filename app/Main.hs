@@ -19,4 +19,4 @@ initialise =
 
 
 main :: IO ()
-main = (putStrLn . show) <$> collapseIntervals =<< initialise
+main = (putStrLn . show . sumIntervals) <$> collapseIntervals =<< initialise
